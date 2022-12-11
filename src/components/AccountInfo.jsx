@@ -4,7 +4,7 @@ function AccountInfo() {
   return (
     <div className="col d-flex justify-content-end mr-3 mt-3">
       <div className="accountInfo d-flex rounded-pill p-1 mt-2 mr-2">
-        <div className="profilePhotoDiv rounded-circle mr-1">
+      <div className="profilePhotoDiv rounded-circle mr-1">
           <img
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzHQv_th9wq3ivQ1CVk7UZRxhbPq64oQrg5Q&usqp=CAU"
             alt="Profile"

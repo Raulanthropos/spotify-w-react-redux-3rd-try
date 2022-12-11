@@ -1,4 +1,5 @@
 import React from "react";
+import { Button } from "react-bootstrap";
 import {
   HouseDoorFill,
   Search,
@@ -6,13 +7,17 @@ import {
   Plus,
   HeartFill,
 } from "react-bootstrap-icons";
+import { useNavigate } from "react-router-dom";
 
 function MyNavBar() {
+
+  const navigate = useNavigate();
+
   return (
-    <div id="first" className="col-2">
+    <>
       <ul id="nav-1" className="nav flex-column">
         <li className="nav-item">
-          <a className="nav-link my-3" href="welcome.html">
+          <a className="nav-link my-3 d-flex" href="welcome.html">
             <img
               id="logo"
               src="https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_CMYK_White.png"
@@ -29,49 +34,38 @@ function MyNavBar() {
           </a>
         </li>
         <li className="nav-item">
-          <a
-            className="nav-link d-flex align-items-center"
-            href="./search.html"
-          >
-            <div className="navIconDivs d-flex justify-content-center align-items-center">
-              <Search />
-            </div>
-            <span className="pl-2 navSpans">Search</span>
-          </a>
+          <Button className="d-flex justify-content-center align-items-center" onClick={() => navigate('/search')}><Search />Search</Button>
         </li>
         <li className="nav-item">
-          <a className="nav-link d-flex align-items-center" href="/">
+
             <div className="navIconDivs d-flex justify-content-center align-items-center">
               <LayoutThreeColumns />
             </div>
-            <span className="pl-2 navSpans">Your Library</span>
-          </a>
+            <span className="pl-2 navSpans" width={40}>Your Library</span>
         </li>
       </ul>
       <hr />
       <ul id="nav-2" className="navActions">
         <li className="nav-item">
-          <a className="nav-link d-flex align-items-center" href="/">
+
             <div className="creatPlaylistDiv d-flex justify-content-center align-items-center">
               <Plus />
             </div>
             <span className="pl-2 navSpans">Create Playlist</span>
-          </a>
         </li>
         <li className="nav-item">
-          <a className="nav-link d-flex align-items-center" href="/">
+
             <div className="navHeartDiv d-flex justify-content-center align-items-center">
               <HeartFill />
             </div>
             <span className="pl-2 navSpans">Liked Songs</span>
-          </a>
         </li>
       </ul>
-      <hr style={{ border: "solid 0.5px rgba(128, 128, 128, 0.43)" }} />
-      <ul id="nav-3" className="navScroll">
+      {/* <hr style={{ border: "solid 0.5px rgba(128, 128, 128, 0.43)" }} />
+      <ul id="nav-3" className="navScroll d-flex flex-column align-items-start">
         <li className="nav-item">
           <a className="nav-link active" href="/">
-            Funky Heavy Blues
+            Funky Heavy Bluesy
           </a>
         </li>
         <li className="nav-item">
@@ -101,7 +95,7 @@ function MyNavBar() {
         </li>
         <li className="nav-item">
           <a className="nav-link" href="/">
-            Breaking the habit
+            Palleggio
           </a>
         </li>
         <li className="nav-item">
@@ -111,7 +105,7 @@ function MyNavBar() {
         </li>
         <li className="nav-item">
           <a className="nav-link" href="/">
-            Jun 19
+            Jun19
           </a>
         </li>
         <li className="nav-item">
@@ -126,7 +120,7 @@ function MyNavBar() {
         </li>
         <li className="nav-item">
           <a className="nav-link" href="/">
-            This is Sparta
+            This is Opeth
           </a>
         </li>
         <li className="nav-item">
@@ -146,7 +140,7 @@ function MyNavBar() {
         </li>
         <li className="nav-item">
           <a className="nav-link" href="/">
-            Smooth Jazz - Rajesh
+            Jazz ClassNameclassName=cs Blue Note Editi...
           </a>
         </li>
       </ul>
@@ -157,8 +151,8 @@ function MyNavBar() {
             <span>Install App</span>
           </a>
         </li>
-      </ul>
-    </div>
+      </ul> */}
+    </>
   );
 }
 
