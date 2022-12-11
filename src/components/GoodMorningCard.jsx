@@ -1,7 +1,7 @@
 import React from "react";
 
 function GoodMorningCard({ data }) {
-  console.log("🚀 GoodMorningCard ~ data", data);
+  console.log(data);
 
   return (
     <div className="col-3">

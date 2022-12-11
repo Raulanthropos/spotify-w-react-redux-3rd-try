@@ -1,9 +1,15 @@
 export const GET_ALBUMS = "GET_ALBUMS";
 
+export const addToCartAction = (album) => ({
+  type: GET_ALBUMS,
+  payload: album,
+})
+
 export const getAlbumsAction = () => {
   const options = {
     method: "GET",
   };
+
   return async (dispatch, getState) => {
     try {
       const response = await fetch(
@@ -13,10 +19,7 @@ export const getAlbumsAction = () => {
       if (response.ok) {
         const albumData = await response.json();
         console.log("albumData", albumData);
-        dispatch({
-          type: GET_ALBUMS,
-          payload: albumData,
-        });
+        dispatch(addToCartAction(albumData));
       } else {
         console.log("Error fetching data!");
       }

@@ -10,7 +10,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 function Homepage() {
   const dispatch = useDispatch();
-  const albumsFromRedux = useSelector((state) => state.albumData);
+  const albumsFromRedux = useSelector((state) => state.data);
   console.log("AAAAAAAAA", albumsFromRedux);
 
   useEffect(() => {
@@ -46,7 +46,6 @@ function Homepage() {
             </div>
 
             <div className="row  mt-3" id="mainrow">
-              <h2 className="col-12 mb-5 d-flex">Recently Played</h2>
               <div className="col-12 pl-3 row" id="firstAlbumRow">
                 <RecentlyPlayedCard />
               </div>
