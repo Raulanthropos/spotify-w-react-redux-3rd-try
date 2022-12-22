@@ -5,7 +5,6 @@ import { useDispatch, useSelector } from "react-redux";
 function RecentlyPlayedCard() {
   const dispatch = useDispatch();
   const artistsFromRedux = useSelector((state) => state.artist.data);
-  console.log("artistsFromRedux", artistsFromRedux);
 
   useEffect(() => {
     dispatch(getArtistsAction());

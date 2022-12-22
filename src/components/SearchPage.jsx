@@ -22,7 +22,7 @@ const SearchPage = () => {
   };
 
   return (
-    <>
+  <div>
               <Form onSubmit={handleSubmit}>
                 <Form.Control
                   type="search"
@@ -35,11 +35,11 @@ const SearchPage = () => {
               </Form>
               <Button className="d-flex justify-content-center align-items-center mt-2 mb-2" onClick={() => navigate('/')}>Go back</Button>
               <ListGroup>
-              {selector.map((albumData) => (
-            <ListGroupItem key={albumData.id}>{albumData.title} <span className="custom-span">{albumData.artist.name}</span></ListGroupItem>
-          ))}
+              {selector ? selector.map((albumData) => (
+            <ListGroupItem className = "bkgr-img" key={albumData.id}>{albumData.title} <span className="custom-span">{albumData.artist.name}</span></ListGroupItem>
+          )) : ""}
           </ListGroup>
-          </>
+          </div>
   );
 };
 

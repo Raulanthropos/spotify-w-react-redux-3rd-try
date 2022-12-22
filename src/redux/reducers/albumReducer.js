@@ -7,7 +7,10 @@ const initialState = {
 const albumReducer = (state = initialState, action={}) => {
   switch (action.type) {
     case GET_ALBUMS:
-      return Object.assign({}, state, {data: action.payload});
+      return {
+        ...state,
+        data: action.payload,
+      };
     default:
       return state;
   }

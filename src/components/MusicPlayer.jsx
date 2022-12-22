@@ -12,7 +12,8 @@ import {
   VolumeUp,
 } from "react-bootstrap-icons";
 
-function MusicPlayer() {
+function MusicPlayer(query) {
+
   return (
     <div className="container-fluid footer fixed-bottom musicPlayer">
       <div className="row mt-3">
@@ -33,9 +34,7 @@ function MusicPlayer() {
           </div>
           <div className="playerSongIcons d-flex align-items-center">
             <div id="change-heart" className="playerHeart px-3">
-              <Heart
-              // !onclick="heartChange()"
-              />
+              <Heart/>
             </div>
             <div className="playerLaptop">
               <Laptop />

@@ -11,7 +11,6 @@ import MyNavBar from "./MyNavBar";
 function Homepage() {
   const dispatch = useDispatch();
   const albumsFromRedux = useSelector((state) => state.albums.data);
-  console.log("🚀albumsFromRedux", albumsFromRedux);
 
   useEffect(() => {
     dispatch(getAlbumsAction());
@@ -37,12 +36,8 @@ function Homepage() {
         </button>
       </div>
     </div>
-
-        {/* <!--Account--> */}
         <AccountInfo />
       </div>
-
-      {/* <!--Cards--> */}
       <div className="row mt-3 scrollit">
         <div className="row" id="cardstart">
           <h1 className="col-12 mb-4 d-flex">Good Morning</h1>
@@ -51,7 +46,7 @@ function Homepage() {
               .slice(0, 8)
               .map((album) => <GoodMorningCard data={album} />)
           ) : (
-            <p>hi</p>
+            <p>Yellow!</p>
           )}
         </div>
 

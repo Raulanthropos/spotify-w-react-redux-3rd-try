@@ -183,21 +183,11 @@ a:visited {
   background-color: black;
   color: white;
 }
-#col-10 {
+#col-10, .bkgr-img {
   background-image: linear-gradient(
     to top,
-    #121212,
-    #121212,
-    #121212,
-    #121212,
-    #121212,
-    #161419,
-    #1a151e,
-    #201522,
-    #311327,
-    #430d24,
-    #53051b,
-    #5e0506
+    #1db954,
+    #191414
   );
   color: white;
 }
@@ -424,7 +414,7 @@ i {
 }
 
 .custom-span {
-  color: red;
+  color: wheat;
   font-weight: 900;
   margin-left: auto;
 }
@@ -432,4 +422,13 @@ i {
 #root > div > div > div {
   display: flex;
   justify-content: space-between;
+}
+
+.onhover:hover {
+  cursor: pointer;
+}
+
+.bkgr-img {
+  display: flex !important;
+  justify-content: space-between !important;
 }
